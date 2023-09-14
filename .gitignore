@@ -1,0 +1,10 @@
+venv/
+
+__pycache__/
+*.py[cod]
+app.sqlite
+.idea/
+*.pid
+.~lock*
+uwsgi.ini
+*.log
