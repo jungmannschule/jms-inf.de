@@ -9,5 +9,10 @@ def index():
 
 
 @bp.route('/steckbriefe')
-def steckbriefe():
+def steckbriefe_index():
     return render_template('steckbriefe/index.html')
+
+
+@bp.route('/steckbriefe/<string:student>')
+def steckbrief(student):
+    return render_template(f'steckbriefe/{student}')
