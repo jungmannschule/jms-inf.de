@@ -2,8 +2,8 @@ venv/
 
 src/templates/steckbriefe/*
 !src/templates/steckbriefe/README.md
-src/files/arbeitsblaetter/*
-!src/files/arbeitsblaetter/README.md
+src/static/files/arbeitsblaetter/*
+!src/static/files/arbeitsblaetter/README.md
 
 __pycache__/
 *.py[cod]
