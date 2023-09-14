@@ -1,5 +1,8 @@
 venv/
 
+src/templates/steckbriefe/*
+!src/templates/steckbriefe/README.md
+
 __pycache__/
 *.py[cod]
 app.sqlite
