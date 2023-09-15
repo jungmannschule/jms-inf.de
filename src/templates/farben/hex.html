@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+      }
+      td {
+        width: 40px;
+	text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bits und Bytes</h1>
+    <h3>Binär</h3>
+    <table>
+      <tr>
+        <th>dez</th>
+        {% for d in dez %}
+          <td>{{ d }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        <th>bin</th>
+        {% for b in bin %}
+          <td>{{ b }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    <h3 style="margin-top: 600px">Hexadezimal</h3>
+    <table style="margin-bottom: 600px">
+      <tr>
+        <th>dez</th>
+        {% for d in dez %}
+          <td>{{ d }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        <th>hex</th>
+        {% for x in hex %}
+          <td>{{ x }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+  </body>
+</html>

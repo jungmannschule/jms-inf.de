@@ -36,3 +36,16 @@ def steckbrief(student):
     if request.cookies.get('user') is None:
         return redirect(url_for('main.login'))
     return render_template(f'steckbriefe/{student}')
+
+
+@bp.route('/farben')
+def farben_index():
+    return render_template('farben/index.html')
+
+
+@bp.route('/farben/hex')
+def farben_hex():
+    dez = range(0,31)
+    hex = [0, 1, 2, 3, 4, 5, 6, 7, 9, 'A', 'B', 'C', 'D', 'E', 'F', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, '?', '?', '?', '?', '?', '?']
+    bin = ['0', '1', '10', '11', '100', '101', '110', '111', '1000', '1001', '1010', '1011', '1100', '1101', '1110', '1111', '10000']
+    return render_template('farben/hex.html', hex=hex, dez=dez, bin=bin)
