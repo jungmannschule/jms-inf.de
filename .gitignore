@@ -1,9 +1,9 @@
 venv/
 
 src/templates/steckbriefe/*
-!src/templates/steckbriefe/README.md
+!src/templates/steckbriefe/.gitkeep
 src/static/files/arbeitsblaetter/*
-!src/static/files/arbeitsblaetter/README.md
+!src/static/files/arbeitsblaetter/.gitkeep
 
 __pycache__/
 *.py[cod]
