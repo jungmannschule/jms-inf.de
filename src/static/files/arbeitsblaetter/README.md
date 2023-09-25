@@ -1,1 +1,1 @@
-This is private.
+This folder is private.
