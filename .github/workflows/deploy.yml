@@ -26,12 +26,15 @@ jobs:
       - name: Stop the server
         run: ssh staging 'supervisorctl stop flask'
 
-      - name: Check out the source
-
-        run: ssh staging 'cd ${{ secrets.STECKBRIEF_PATH }} && git pull'
+      - name: Update Steckbriefe
+        run: ssh staging 'cd ${{ secrets.STECKBRIEFE_PATH }} && git pull'
+      
+      - name: Update Arbeitsblaetter
         run: ssh staging 'cd ${{ secrets.ARBEITSBLAETTER_PATH }} && git pull'
+
+      - name: Update Flask App
         run: ssh staging 'cd ${{ secrets.APP_PATH }} && git pull'
 
       - name: Start the server
         if: ${{ always() }}
-        run: ssh staging 'sudo systemctl start my-application'
+        run: ssh staging 'supervisorctl start flask'
