@@ -2,6 +2,6 @@ import os
 
 
 class Config(object):
-    VERSION = '0.0.6'
+    VERSION = '0.0.7'
     SECRET_KEY = os.environ.get('FLASK_SECRET', 'fallback-secret')
 
