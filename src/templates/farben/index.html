@@ -4,7 +4,17 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <h1>Farben mischen</h1>
+    <h1>HTML-Farben</h1>
+    <p>Farben können in CSS auf verschiedene Arten angegeben werden:</p>
+    <ul>
+      <li><a href="https://www.w3schools.com/cssref/css_colors.php">Farbnamen:</a><pre>color: blue;</pre></li>
+      <li>Rot/Grün/Blau: <pre>color: rgb(0, 0, 255);</pre></li>
+      <li>Hex-RGB: <pre>color: #0000ff;</pre></li>
+    </ul>
+    <h3>Hexadezimale Schreibweise</h3>
+    <p>Bei RGB kann man die Werte entweder in dezimaler (von 0 bis 255) oder in hexadezimaler (von 00 bis ff) Schreibweise angeben.</p>
+    <p>Notizen zu den Schreibweisen und ihrer Bedeutung für Computersysteme findest du hier: <a href="{{ url_for('main.farben_hex') }}">Bits und Bytes</a></p>
+    <h3>Farben mischen</h3>
     <p>Man unterscheidet zwischen additiver Farbmischung (Licht) und subtraktiver Farbmischung (z.B. Aquarellfarben).</p>
     <p>Mehr Informationen hier:</p>
     <ul>
