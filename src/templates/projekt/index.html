@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Projekt: Webseite</h1>
+    <p>Aufgabe ist es, allein, zu zweit oder zu dritt eine Webseite nach den <a href="{{ url_for('static', filename='files/htmlprojekt.pdf') }}">
+      festgelegten Vorgaben</a> zu erstellen.<br>
+      Abgabe für die Projektdateien ist der 03.11.2023.</p>
+    <p style="margin: 2em 0">Für einen schnellen Start können vorbereitete Dateien hier heruntergeladen werden:<br>
+      <a href="{{ url_for('static', filename='files/starterpack.zip') }}">Starterpack herunterladen</a></p>
+    <p>Die fertigen Projekdateien können als <a href="https://praxistipps.chip.de/ordner-in-zip-umwandeln-so-gehts_12393">ZIP-Datei</a> dann ebenso hier hochgeladen* werden:</p>
+    <input type="file">
+    <p><small>*Hochladen funktioniert noch nicht.</small></p>
+  </body>
+</html>

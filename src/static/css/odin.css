@@ -1,0 +1,113 @@
+body {
+	margin: 0;
+	font-family: "Noto Sans", sans-serif;
+}
+header {
+	color: #F9FAF8;
+	background-color: #1F2937;
+	padding: 1em 0;
+}
+header a {
+	color: #E5E7EB;
+	text-decoration: none;
+}
+header a:hover {
+	color: #F9FAF8;
+}
+#logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+.container {
+	width: 60em;
+	margin: 0 auto;
+}
+header .container {
+	display: flex;
+	justify-content: space-between;
+}
+#nav {
+	font-size: 18pxS;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+#hero {
+	color: #F9FAF8;
+	background-color: #1F2937;
+}
+#hero .container {
+	padding-top: 6em;
+	padding-bottom: 8em;
+	display: flex;
+	gap: 2em;
+}
+#hero .left,
+#hero .right {
+	flex: 1;
+}
+#hero h1 {
+	margin: 0;
+	font-size: 48px;
+	font-weight: bolder;
+	line-height: 1em;
+}
+#hero .left p {
+	margin: 1em 0;
+	color: #E5E7EB;
+}
+#hero .left .button {
+	color: #F9FAF8;
+	background-color: #3882F6;
+	display: inline-block;
+	margin: 0.5em 0;
+	padding: 0.5em 2em;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 0.5em;
+	border: 0;
+	text-decoration: none;
+}
+#hero .left .button:hover {
+	background-color: #206BE0;
+	cursor: pointer;
+}
+#hero .right {
+	background-color: #6d747d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#hero .right a {
+	color: #F9FAF8;
+}
+/*
+#info .container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#info h2 {
+	font-size: 36px;
+}
+#info ul {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+#info ul li {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#info ul li .box{
+	width: 150px;
+	height: 150px;
+	border: 4px solid #3882F6;
+	border-radius: 1.5em;
+}
+*/

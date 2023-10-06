@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project Odin Flexbox Project</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/odin.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<span id="logo"><a href="{{ url_for('main.index') }}">JMS Flexbox</a></span>
+			<ul id="nav">
+        <li><a href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/">Interactive Guide</a></li>
+				<li><a href="https://flexbox.malven.co/">Cheatsheet</a></li>
+				<li><a href="{{ url_for('static', filename='files/arbeitsblaetter/2023-10-06-Flexbox.pdf') }}">Arbeitsblatt</a></li>
+				<li><a href="https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox">The Odin Project</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<section id="hero">
+		<div class="container">
+			<div class="left">
+				<h1>Flex all the things!</h1>
+				<p>Design your website layouts with CSS flexbox or take a practice round with some frogs first.</p>
+				<a class="button" href="https://flexboxfroggy.com/">Take me there!</a>
+			</div>
+			<div class="right">
+				<p>Get the designer drafts for <a href="{{ url_for('static', filename='img/flex-spec1.png') }}">layout</a> and <a href="{{ url_for('static', filename='/img/flex-spec2.png') }}">typography</a>.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="info">
+		<div class="container">
+			<h2>Some random information.</h2>
+			<ul>
+				<li><div class="box"></div>this is some subtext</li>
+				<li><div class="box"></div>this is some subtext</li>
+				<li><div class="box"></div>this is some subtext</li>
+				<li><div class="box"></div>this is some subtext</li>
+			</ul>
+		</div>
+	</section>
+
+</body>
+</html>

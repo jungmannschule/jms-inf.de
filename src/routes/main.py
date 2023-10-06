@@ -49,3 +49,13 @@ def farben_hex():
     hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, '?', '?', '?', '?', '?', '?', '?']
     bin = ['0', '1', '10', '11', '100', '101', '110', '111', '1000', '1001', '1010', '1011', '1100', '1101', '1110', '1111', '10000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     return render_template('farben/hex.html', hex=hex, dez=dez, bin=bin)
+
+
+@bp.route('/flexbox')
+def flexbox_index():
+    return render_template('flexbox/odin.html')
+
+
+@bp.route('/projekt')
+def projekt_index():
+    return render_template('projekt/index.html')
