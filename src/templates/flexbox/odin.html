@@ -28,18 +28,20 @@
 				<a class="button" href="https://flexboxfroggy.com/">Take me there!</a>
 			</div>
 			<div class="right">
-				<p>Get the designer drafts for <a href="{{ url_for('static', filename='img/flex-spec1.png') }}">layout</a> and <a href="{{ url_for('static', filename='/img/flex-spec2.png') }}">typography</a>.</p>
+        <a href="https://flexboxfroggy.com"><img src="{{ url_for('static', filename='img/flexbox-froggy.png') }}"></a>
 			</div>
 		</div>
 	</section>
 
 	<section id="info">
 		<div class="container">
-			<h2>Some random information.</h2>
+			<h2>Check out these flexbox projects:</h2>
 			<ul>
-				<li><div class="box"></div>this is some subtext</li>
-				<li><div class="box"></div>this is some subtext</li>
-				<li><div class="box"></div>this is some subtext</li>
+        {% for img_path, title in [['img/projects/soccer-rank.jpeg', 'Fußball Fan Ranking']] %}
+          <li><div class="box"><img src="{{ url_for('static', filename=img_path) }}"></div><span class="project-title">{{ title }}</span></li>
+        {% endfor %}
+        <li><div class="box"></div><span class="project-title">Soul Sisters</span></li>
+        <li><div class="box"></div>this is some subtext</li>
 				<li><div class="box"></div>this is some subtext</li>
 			</ul>
 		</div>

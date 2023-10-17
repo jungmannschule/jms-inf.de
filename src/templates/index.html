@@ -4,11 +4,15 @@
   <h1>Informatik an der JMS</h1>
   <p>Willkommen auf den Seiten des WPF Informatik an der Jungmannschule Eckernförde.</p>
 
-  <ul>
-    <li><a href="{{ url_for('main.steckbriefe_index') }}">Steckbriefe</a></li>
-    <li><a href="{{ url_for('main.farben_index') }}">HTML Farben</a></li>
-    <li><a href="{{ url_for('main.flexbox_index') }}">CSS Flexbox</a></li>
-    <li><a href="{{ url_for('main.projekt_index') }}">Webseiten Projekt</a></li>
+  <ol>
+    <li>HTML & CSS
+      <ul>
+        <li><a href="{{ url_for('main.steckbriefe_index') }}">Steckbriefe</a></li>
+        <li><a href="{{ url_for('main.farben_index') }}">Farben & Bilder</a></li>
+        <li><a href="{{ url_for('main.flexbox_index') }}">CSS Flexbox</a></li>
+        <li><a href="{{ url_for('main.projekt_index') }}">Webseiten Projekt</a></li>
+      </ul>
+    </li>
     <li><a href="https://bwinf.de/bundeswettbewerb/42/">Bundeswettbewerb Informatik 2023</a></li>
-  </ul>
+  </ol>
 {% endblock %}

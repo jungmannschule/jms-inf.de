@@ -2,25 +2,59 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            min-width: 1.5em;
+            padding: 0 0.5em;
+            text-align: center;
+        }
+    </style>
   </head>
   <body>
-    <h1>HTML-Farben</h1>
+    <h1>Farben</h1>
     <p>Farben können in CSS auf verschiedene Arten angegeben werden:</p>
     <ul>
-      <li><a href="https://www.w3schools.com/cssref/css_colors.php">Farbnamen:</a><pre>color: blue;</pre></li>
-      <li>Rot/Grün/Blau: <pre>color: rgb(0, 0, 255);</pre></li>
-      <li>Hex-RGB: <pre>color: #0000ff;</pre></li>
+      <li><a href="">Farbnamen:</a> <code>color: blue;</code></li>
+      <li>Rot/Grün/Blau: <code>color: rgb(0, 0, 255);</code></li>
+      <li>Hex-RGB: <code>color: #0000ff;</code></li>
     </ul>
-    <h3>Hexadezimale Schreibweise</h3>
-    <p>Bei RGB kann man die Werte entweder in dezimaler (von 0 bis 255) oder in hexadezimaler (von 00 bis ff) Schreibweise angeben.</p>
-    <p>Notizen zu den Schreibweisen und ihrer Bedeutung für Computersysteme findest du hier: <a href="{{ url_for('main.farben_hex') }}">Bits und Bytes</a></p>
+    <p>Bei RGB kann man die Werte entweder in dezimaler (von 0 bis 255) oder in hexadezimaler (von 00 bis ff) Schreibweise angeben.<br>
+      Zur Veranschaulichung hier ein paar verschiedene Zahlensysteme (dezimal, hexadezimal, binär):</p>
+      <table>
+        <tr>
+          <th>dez</th>
+          {% for d in dez %}
+            <td>{{ d }}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <th>hex</th>
+          {% for h in hex %}
+            <td>{{ h }}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <th>bin</th>
+          {% for b in bin %}
+            <td>{{ b }}</td>
+          {% endfor %}
+        </tr>
+      </table>
     <h3>Farben mischen</h3>
-    <p>Man unterscheidet zwischen additiver Farbmischung (Licht) und subtraktiver Farbmischung (z.B. Aquarellfarben).</p>
-    <p>Mehr Informationen hier:</p>
+    <p>Man unterscheidet zwischen additiver Farbmischung (Licht) und subtraktiver Farbmischung (z.B. Aquarellfarben).<br>
+      Bei der Mischung mittels RGB handelt es sich um additive Farbmischung,<br>
+      entsprechend ergibt <code>rgb(255, 255, 255)</code> bzw. <code>#ffffff</code> die Farbe weiß.</p>
+    <img style="width: 500px;" src="{{ url_for('static', filename='img/farben-mixing.png') }}" width="800px" />
+    <p>Wer sich für Farbtheorie interessiert, kann auf <a href="https://de.wikipedia.org/wiki/Farbmischung">Wikipedia: Farbmischung</a> eine gute Übersicht erhalten<br>
+      oder mit dem englischen (aber leicht zugänglichen) <a href="http://static.lawrencehallofscience.org/gss/dew/documents/AllAboutDEW201204.pdf">Guide des NASA Projekts DEW</a> tiefer einsteigen.</p>
+    <p>Wer lieber mit Farben spielt, findet hier nützliche Tools um stimmige Farbkombinationen zu generieren:</p>
     <ul>
-      <li><a href="http://static.lawrencehallofscience.org/gss/dew/documents/AllAboutDEW201204.pdf">PDF Digital Images (en)</a></li>
-      <li><a href="https://de.wikipedia.org/wiki/Farbmischung">Wiki: Farbmischung</a></li>
+      <li><a href="https://color.adobe.com">Adobe Color</a></li>
+      <li><a href="https://coolors.co/generate">Coolors</a></li>
     </ul>
-    <img src="{{ url_for('static', filename='img/farben-mixing.png') }}" width="800px" />
   </body>
 </html>
