@@ -2,6 +2,13 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
+    <style>
+      #videos {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+      }
+    </style>
   </head>
   <body>
     <h1>Projekt: Webseite</h1>
@@ -19,9 +26,15 @@
         </ul>
       {% endif %}
     {% endwith %}
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" style="margin-bottom: 3em;">
       <input type="file" name="file"><br><br>
       <input type="submit" value="Hochladen">
     </form>
+
+    <h2>Tutorial Videos:</h2>
+    <div id="videos">
+      <video controls src="{{ url_for('static', filename='videos/htmlprojekt_01_setup.mp4') }}" poster="{{ url_for('static', filename='videos/htmlprojekt_01_setup.png') }}" width="500"></video>
+    </div>
+
   </body>
 </html>

@@ -6,6 +6,8 @@ src/templates/steckbriefe/*
 !src/templates/steckbriefe/.gitkeep
 src/static/files/arbeitsblaetter/*
 !src/static/files/arbeitsblaetter/.gitkeep
+src/static/videos/*
+!src/static/videos/.gitkeep
 
 __pycache__/
 *.py[cod]
