@@ -1,5 +1,7 @@
 venv/
 
+uploads/*
+!uploads/.gitkeep
 src/templates/steckbriefe/*
 !src/templates/steckbriefe/.gitkeep
 src/static/files/arbeitsblaetter/*

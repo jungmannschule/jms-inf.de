@@ -1,5 +1,8 @@
-from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response
+import os
+
+from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response, current_app
 from werkzeug.security import check_password_hash
+from werkzeug.utils import secure_filename
 
 from src.forms import LoginForm
 
@@ -51,6 +54,25 @@ def flexbox_index():
     return render_template('flexbox/odin.html')
 
 
-@bp.route('/projekt')
+def allowed_file(filename):
+    return '.' in filename and \
+        filename.rsplit('.', 1)[1].lower() in {'zip', 'gzip', 'gz', '7z', 'rar'}
+
+
+@bp.route('/projekt', methods=['GET', 'POST'])
 def projekt_index():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('Fehler: Keine Datei ausgewählt.')
+            return redirect(request.url)
+        file = request.files['file']
+        if file.filename == '':
+            flash('Fehler: Keine Datei ausgewählt.')
+            return redirect(request.url)
+        if not allowed_file(file.filename):
+            flash('Fehler: Es werden nur ZIP-Dateien akzeptiert.')
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+            flash('Datei erfolgreich hochgeladen!')
     return render_template('projekt/index.html')

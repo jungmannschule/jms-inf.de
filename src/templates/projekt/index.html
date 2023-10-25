@@ -10,8 +10,18 @@
       Abgabe für die Projektdateien ist der 03.11.2023.</p>
     <p style="margin: 2em 0">Für einen schnellen Start können vorbereitete Dateien hier heruntergeladen werden:<br>
       <a href="{{ url_for('static', filename='files/starterpack.zip') }}">Starterpack herunterladen</a></p>
-    <p>Die fertigen Projekdateien können als <a href="https://praxistipps.chip.de/ordner-in-zip-umwandeln-so-gehts_12393">ZIP-Datei</a> dann ebenso hier hochgeladen* werden:</p>
-    <input type="file">
-    <p><small>*Hochladen funktioniert noch nicht.</small></p>
+    <p>Die fertigen Projekdateien können <a href="https://praxistipps.chip.de/ordner-in-zip-umwandeln-so-gehts_12393">als ZIP-Datei</a> (keine anderen Formate!) dann ebenso hier hochgeladen werden:</p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p style="display: inline-block; color: dodgerblue; border: solid 1px dodgerblue; padding: 0.25em 0.5em;">{{ message }}</p>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file"><br><br>
+      <input type="submit" value="Hochladen">
+    </form>
   </body>
 </html>
