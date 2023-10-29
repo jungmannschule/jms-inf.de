@@ -1,4 +1,6 @@
 import os
+from datetime import datetime
+from time import strftime
 
 from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response, current_app
 from werkzeug.security import check_password_hash
@@ -72,7 +74,8 @@ def projekt_index():
         if not allowed_file(file.filename):
             flash('Fehler: Es werden nur ZIP-Dateien akzeptiert.')
         if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
+            unique = datetime.utcnow().strftime('%y%m%d-%H%M%S')
+            filename = f'{unique}-{secure_filename(file.filename)}'
             file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
             flash('Datei erfolgreich hochgeladen!')
     return render_template('projekt/index.html')
