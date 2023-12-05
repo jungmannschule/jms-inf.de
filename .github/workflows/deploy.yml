@@ -27,11 +27,11 @@ jobs:
       - name: Stop the server
         run: ssh staging 'supervisorctl stop flask'
 
-      - name: Update Steckbriefe
-        run: ssh staging 'cd ${{ secrets.STECKBRIEFE_PATH }} && git pull'
+      # - name: Update Steckbriefe
+      #   run: ssh staging 'cd ${{ secrets.STECKBRIEFE_PATH }} && git pull'
 
-      - name: Update Arbeitsblaetter
-        run: ssh staging 'cd ${{ secrets.ARBEITSBLAETTER_PATH }} && git pull'
+      # - name: Update Arbeitsblaetter
+      #   run: ssh staging 'cd ${{ secrets.ARBEITSBLAETTER_PATH }} && git pull'
 
       - name: Update Flask App
         run: ssh staging 'cd ${{ secrets.APP_PATH }} && git pull'
