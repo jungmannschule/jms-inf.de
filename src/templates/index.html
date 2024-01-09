@@ -13,15 +13,23 @@
         <li><a href="{{ url_for('main.projekt_index') }}">Webseiten Projekt</a></li>
       </ul>
     </li>
-	<li>Wettbewerbe</li>
-	  <ul>
-		<li><a href="https://bwinf.de/bundeswettbewerb/42/">Bundeswettbewerb Informatik 2023</a></li>
-		<li><a href="https://adventofcode.com">Advent of Code</a></li>
-	  </ul>
-    <li>Versionsverwaltung mit git</li>
+    <li>Wettbewerbe
       <ul>
-        <li><a href="{{ url_for('static', filename='files/labyrinth.zip') }}">Zeitmaschine</a></li>
-		<li><a href="https://jms-inf.de/git">Intro to Git (on Gitea)</a></li>
+        <li><a href="https://bwinf.de/bundeswettbewerb/42/">Bundeswettbewerb Informatik 2023</a></li>
+        <li><a href="https://adventofcode.com">Advent of Code</a></li>
       </ul>
+    </li>
+    <li>Versionsverwaltung mit git
+    <ul>
+      <li><a href="{{ url_for('static', filename='files/labyrinth.zip') }}">Zeitmaschine</a></li>
+      <li><a href="https://jms-inf.de/git">Intro to Git (on Gitea)</a></li>
+    </ul>
+    </li>
+  <li>
+    <ul>Algorithmen
+      <li><a href="">Game of Life</a></li>
+      <li><a href="https://jms-inf.de/git/9inf/secret">Secret</a></li>
+    </ul>
+  </li>
   </ol>
 {% endblock %}
