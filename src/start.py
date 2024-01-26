@@ -1,3 +1,4 @@
+import asyncio
 import os
 
 from dotenv import load_dotenv
@@ -10,7 +11,8 @@ def create_app(config_object=None):
     app = Flask(__name__)
     app.config.from_object(config_object)
     register_blueprints(app)
-    run_async(connect_db(app))
+    # run_async(connect_db(app))
+    asyncio.get_event_loop().run_until_complete(connect_db(app))
 
     @app.before_request
     def inject_g():
