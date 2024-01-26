@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <style>
+      table {width: 500px; text-align: left; border-collapse: collapse;}
+      th {width: 80px;}
+      td, th {border: 1px solid black; padding: 0.5em 0.25em;}
+      tr td, tr th {text-align: center;}
+      tr td:nth-child(1), tr th:nth-child(1) {text-align: left;}
+      .circle {width: 1rem; height: 1rem; border-radius: 50%; display: inline-block;}
+      .success {background: green;}
+      .warning {background: gold;}
+      .error {background: red;}
+  </style>
+</head>
+<body>
+  <h1>Python 01</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Login</th>
+      {% for repo in repos %}
+        <th>{{ repo }}</th>
+      {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for student in students %}
+      <tr>
+        <td>{{ student['login'] }}</td>
+        {% for repo in repos %}
+          <td><a class="circle {{ student[repo]['circle'] }}" href="{{ student[repo]['url'] }}"></a></td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <pre>{{ response }}</pre>
+</body>
+</html>

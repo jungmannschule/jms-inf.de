@@ -1,4 +1,7 @@
 venv/
+.env
+.env-production
+sqlite*
 
 uploads/*
 !uploads/.gitkeep
@@ -8,6 +11,8 @@ src/static/files/arbeitsblaetter/*
 !src/static/files/arbeitsblaetter/.gitkeep
 src/static/videos/*
 !src/static/videos/.gitkeep
+src/students/*
+!src/students/.gitkeep
 
 __pycache__/
 *.py[cod]

@@ -1,4 +1,6 @@
-flask
+flask[async]
 flask_login
 flask_wtf
 uwsgi
+tortoise-orm[asyncmy]
+python-dotenv
