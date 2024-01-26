@@ -26,10 +26,6 @@ async def python_course():
         for student in students:
             if student['login'] in fork_owners:
                 student_repo = await get_repo(user=student['login'], repo=repo)
-                print(student['login'])
-                print(f'{student_repo.updated_unix=}')
-                print(f'{root.updated_unix=}')
-                print()
                 if student_repo.num_stars > 0:
                     circle = 'success'
                 else:
