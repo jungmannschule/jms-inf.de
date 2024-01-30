@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from src.models import Repository
+from src.models import Repository, Branch
 from src.students.students_9inf import students as inf_9_list
 
 bp = Blueprint('python', __name__)
@@ -14,12 +14,18 @@ def get_forks(fork_id):
     return Repository.select(lambda r: r.fork_id == fork_id)
 
 
+def get_latest_commit(repo_id):
+    main = Branch.get(repo_id=repo_id, name='main')
+    return main.commit_id
+
+
 @bp.route('/python', methods=['GET'])
 def python_course():
     repos = ['python_01', 'python_02']
     students = [{'login': s['login']} for s in inf_9_list]
     for repo in repos:
         root = get_repo(user='9inf', repo=repo)
+        root_latest = get_latest_commit(root.id)
         forks = get_forks(fork_id=root.id)
         fork_owners = [f.owner_name for f in forks]
 
@@ -28,6 +34,8 @@ def python_course():
                 student_repo = get_repo(user=student['login'], repo=repo)
                 if student_repo.num_stars > 0:
                     circle = 'success'
+                elif root_latest != get_latest_commit(student_repo.id):
+                    circle = 'ready'
                 else:
                     circle = 'warning'
                 url = f'https://jms-inf.de/git/{student["login"]}/{repo}'

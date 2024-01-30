@@ -15,6 +15,15 @@ class Repository(db.Entity):
     updated_unix = Required(int)
 
 
+class Branch(db.Entity):
+    id = PrimaryKey(int, auto=True)
+    repo_id = Required(int)
+    name = Required(str)
+    commit_id = Required(str)
+    commit_message = Required(str)
+    pusher_id = Required(int)
+
+
 class Action(db.Entity):
     id = PrimaryKey(int, auto=True)
     user_id = Required(int)
