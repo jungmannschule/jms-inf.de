@@ -1,22 +1,22 @@
-from tortoise.models import Model
-from tortoise import fields
+from pony.orm import Database, Required, PrimaryKey
+
+db = Database()
 
 
-class Repository(Model):
-    id = fields.BigIntField(pk=True)
-    owner_id = fields.BigIntField()
-    owner_name = fields.CharField(max_length=255)
-    lower_name = fields.CharField(max_length=255)
-    name = fields.CharField(max_length=255)
-    num_stars = fields.IntField()
-    fork_id = fields.BigIntField()
-    created_unix = fields.BigIntField()
-    updated_unix = fields.BigIntField()
+class Repository(db.Entity):
+    id = PrimaryKey(int, auto=True)
+    owner_id = Required(int)
+    owner_name = Required(str)
+    lower_name = Required(str)
+    name = Required(str)
+    num_stars = Required(int)
+    fork_id = Required(int)
+    created_unix = Required(int)
+    updated_unix = Required(int)
 
 
-class Action(Model):
-    id = fields.BigIntField(pk=True)
-    user_id = fields.BigIntField()
-    repo_id = fields.BigIntField()
-    created_unix = fields.BigIntField()
-
+class Action(db.Entity):
+    id = PrimaryKey(int, auto=True)
+    user_id = Required(int)
+    repo_id = Required(int)
+    created_unix = Required(int)

@@ -1,11 +1,6 @@
 flask[async]
 flask_login
 flask_wtf
-tortoise-orm[asyncmy]
 python-dotenv
-
-uwsgi
-uvicorn
-gunicorn
-uvloop
-httptools
+pony
+pymysql

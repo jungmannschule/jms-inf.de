@@ -6,26 +6,26 @@ from src.students.students_9inf import students as inf_9_list
 bp = Blueprint('python', __name__)
 
 
-async def get_repo(user, repo):
-    return await Repository.get(owner_name=user, lower_name=repo)
+def get_repo(user, repo):
+    return Repository.get(owner_name=user, lower_name=repo)
 
 
-async def get_forks(fork_id):
-    return await Repository.filter(fork_id=fork_id)
+def get_forks(fork_id):
+    return Repository.select(lambda r: r.fork_id == fork_id)
 
 
 @bp.route('/python', methods=['GET'])
-async def python_course():
+def python_course():
     repos = ['python_01', 'python_02']
     students = [{'login': s['login']} for s in inf_9_list]
     for repo in repos:
-        root = await get_repo(user='9inf', repo=repo)
-        forks = await get_forks(fork_id=root.id)
+        root = get_repo(user='9inf', repo=repo)
+        forks = get_forks(fork_id=root.id)
         fork_owners = [f.owner_name for f in forks]
 
         for student in students:
             if student['login'] in fork_owners:
-                student_repo = await get_repo(user=student['login'], repo=repo)
+                student_repo = get_repo(user=student['login'], repo=repo)
                 if student_repo.num_stars > 0:
                     circle = 'success'
                 else:
