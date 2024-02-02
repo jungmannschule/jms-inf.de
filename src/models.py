@@ -24,8 +24,8 @@ class Branch(db.Entity):
     pusher_id = Required(int)
 
 
-class Action(db.Entity):
+class Issue(db.Entity):
     id = PrimaryKey(int, auto=True)
-    user_id = Required(int)
+    poster_id = Required(int)
     repo_id = Required(int)
-    created_unix = Required(int)
+    is_closed = Required(bool)
