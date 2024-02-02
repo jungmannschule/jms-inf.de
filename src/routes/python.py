@@ -39,12 +39,12 @@ def python_course():
                 issues = get_issues(student_repo.id)
                 if student_repo.num_stars > 0:
                     circle = 'success'
-                elif root_latest_commit != get_latest_commit(student_repo.id):
-                    circle = 'ready'
                 elif len(issues) > 0:
                     circle = 'warning'
                     if all(i.is_closed for i in issues):
                         circle = 'ready'
+                elif root_latest_commit != get_latest_commit(student_repo.id):
+                    circle = 'ready'
                 else:
                     circle = 'warning'
                 url = f'https://jms-inf.de/git/{student["login"]}/{repo}'
