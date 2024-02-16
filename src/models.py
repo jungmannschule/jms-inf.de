@@ -29,3 +29,11 @@ class Issue(db.Entity):
     poster_id = Required(int)
     repo_id = Required(int)
     is_closed = Required(bool)
+
+
+class Star(db.Entity):
+    id = PrimaryKey(int, auto=True)
+    uid = Required(int)
+    repo_id = Required(int)
+    created_unix = Required(int)
+

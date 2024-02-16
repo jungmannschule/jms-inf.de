@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from src.models import Repository, Branch, Issue
+from src.models import Repository, Branch, Issue, Star
 from src.students.students_9inf import students as inf_9_list
 
 bp = Blueprint('python', __name__)
@@ -37,7 +37,7 @@ def python_course():
             if student['login'] in fork_owners:
                 student_repo = get_repo(user=student['login'], repo=repo)
                 issues = get_issues(student_repo.id)
-                if student_repo.num_stars > 0:
+                if Star.get(uid=1, repo_id=student_repo.id):
                     circle = 'success'
                 elif len(issues) > 0:
                     circle = 'warning'
