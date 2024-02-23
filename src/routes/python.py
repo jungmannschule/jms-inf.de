@@ -25,7 +25,7 @@ def get_issues(repo_id):
 
 @bp.route('/python', methods=['GET'])
 def python_course():
-    repos = ['python_01', 'python_02', 'python_03', 'python_04']
+    repos = ['python_01', 'python_02', 'python_03', 'python_04', 'python_05_1', 'python_05_2', 'python_05_3']
     students = [{'login': s['login']} for s in inf_9_list]
     for repo in repos:
         root = get_repo(user='9inf', repo=repo)
