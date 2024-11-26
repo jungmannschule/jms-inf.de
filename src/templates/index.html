@@ -1,36 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Informatik an der JMS</h1>
-  <p>Willkommen auf den Seiten des WPF Informatik an der Jungmannschule Eckernförde.</p>
-
-  <ol>
-    <li>HTML & CSS
-      <ul>
-        <li><a href="{{ url_for('main.steckbriefe_index') }}">Steckbriefe</a></li>
-        <li><a href="{{ url_for('main.farben_index') }}">Farben & Bilder</a></li>
-        <li><a href="{{ url_for('main.flexbox_index') }}">CSS Flexbox</a></li>
-        <li><a href="{{ url_for('main.projekt_index') }}">Webseiten Projekt</a></li>
-      </ul>
-    </li>
-    <li>Wettbewerbe
-      <ul>
-        <li><a href="https://bwinf.de/bundeswettbewerb/42/">Bundeswettbewerb Informatik 2023</a></li>
-        <li><a href="https://adventofcode.com">Advent of Code</a></li>
-      </ul>
-    </li>
-    <li>Versionsverwaltung mit git
-      <ul>
-        <li><a href="{{ url_for('static', filename='files/labyrinth.zip') }}">Zeitmaschine</a></li>
-        <li><a href="https://jms-inf.de/git">Intro to Git (on Gitea)</a></li>
-      </ul>
-    </li>
-    <li>Algorithmen
-      <ul>
-        <li><a href="">Game of Life</a></li>
-        <li><a href="https://jms-inf.de/git/9inf/secret">Caesar-Scheibe</a></li>
-        <li><a href="{{ url_for('python.python_course') }}">Python-Kurs</a></li>
-      </ul>
-    </li>
-  </ol>
+  <h1>Informatik an der Jungmannschule</h1>
+  <p>Unterricht im Jahrgang 7:</p>
+  <ul>
+    <li><a href="git/org/7inf/teams/7a/repositories">7a</a></li>
+    <li><a href="git/org/7inf/teams/7b/repositories">7b</a></li>
+    <li><a href="git/org/7inf/teams/7c/repositories">7c</a></li>
+    <li><a href="git/org/7inf/teams/7d/repositories">7d</a></li>
+  </ul>
 {% endblock %}
