@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Informatik an der Jungmannschule</h1>
-  <p>Unterricht im Jahrgang 7:</p>
-  <ul>
-    <li><a href="git/org/7inf/teams/7a/repositories">7a</a></li>
-    <li><a href="git/org/7inf/teams/7b/repositories">7b</a></li>
-    <li><a href="git/org/7inf/teams/7c/repositories">7c</a></li>
-    <li><a href="git/org/7inf/teams/7d/repositories">7d</a></li>
-  </ul>
-
-  <h2>WPU 10 Informatik</h2>
-  <p>Sinus Jugendstudie als <a href="https://www.bpb.de/system/files/dokument_pdf/u18_SINUS-Jugendstudie_Wie-ticken-Jugendliche_2024_Print_24-06-07_Sperrfrist_12.06.24_12.00.pdf">herunterladen</a></p>
+ <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='img/jms.png') }}" alt="" width="400">
+    <h1 class="display-5 fw-bold text-body-emphasis">Informatik an der Jungmannschule</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Hallo! Willkommen im Projekt- und Arbeitsbereich Informatik für Schülerinnen und Schüler der Jungmannschule Eckernförde. Ihr findet hier Material und Links zu unseren aktuellen Unterrichtseinheiten.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a type="button" href="{{ url_for('web7.webseiten') }}" class="btn btn-primary btn-lg px-4 gap-3">7. Klasse</a>
+        <a type="button" href="https://richard.jms-inf.de" class="btn btn-primary btn-lg px-4 gap-3">10. Klasse</a>
+        <a type="button" href="https://jms-eck.de" class="btn btn-outline-secondary btn-lg px-4">Zur Jungmannschule</a>
+      </div>
+    </div>
+  </div>
 {% endblock %}

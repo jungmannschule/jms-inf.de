@@ -35,3 +35,5 @@ def register_blueprints(app):
     app.register_blueprint(bp_main)
     from src.routes.python import bp as bp_python
     app.register_blueprint(bp_python)
+    from src.routes.web7 import bp as bp_web7
+    app.register_blueprint(bp_web7)

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="my-5 container" style="text-align: center;">
+    <h1>Webseiten</h1>
+    <p>Anstatt das Repository mit "git clone" herunterzuladen, könnt ihr Python Code auch im Browser laufen lassen: <a href="https://www.online-python.com/">online-python.com</a>.</p>
+    <p style="line-height: 2.75em">
+      {% for repo in repos %}
+        <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#{{ repo }}">{{ repo }}</a>
+      {% endfor %}
+    </p>
+  </div>
+
+  {% for repo in repos %}
+    <!-- Modal -->
+    <div class="modal fade" id="{{ repo }}" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ repo }}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...test...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-primary" href="https://jms-inf.de/git/7inf/{{ repo }}">Go to repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
