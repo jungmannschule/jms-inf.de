@@ -3,8 +3,7 @@ import os
 from flask import Blueprint, render_template
 from gitea import *
 
-from src.models import Repository, Branch, Issue, Star
-from src.students.students_2024_7c import students, repo_names
+from src.models import Repository, Branch, Issue
 
 bp = Blueprint('web7', __name__)
 gitea = Gitea('https://jms-inf.de/git', os.getenv('GITEA_API'))
