@@ -2,6 +2,6 @@ import os
 
 
 class Config(object):
-    VERSION = '0.1.7'
+    VERSION = '0.1.8'
     SECRET_KEY = os.environ.get('FLASK_SECRET', 'fallback-secret')
     UPLOAD_FOLDER = 'uploads'

@@ -15,6 +15,22 @@
             height: 1.25em;
             vertical-align: -0.125em;
         }
+        .crit-status {
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            border-radius: 50%;
+            vertical-align: -0.1em;
+        }
+        .crit-status.success {
+            background: #28a745;
+        }
+        .crit-status.warning {
+            background: #ffc107;
+        }
+        .crit-status.danger {
+            background: #dc3545;
+        }
         {% block style %}{% endblock %}
     </style>
 </head>
@@ -56,5 +72,6 @@
 </div>
 
 <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/htmx.min.js') }}" crossorigin="anonymous"></script>
 </body>
 </html>
