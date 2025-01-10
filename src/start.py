@@ -37,3 +37,5 @@ def register_blueprints(app):
     app.register_blueprint(bp_python)
     from src.routes.web7 import bp as bp_web7
     app.register_blueprint(bp_web7)
+    from src.routes.godot10 import bp as bp_godot10
+    app.register_blueprint(bp_godot10)
