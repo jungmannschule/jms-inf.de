@@ -83,10 +83,10 @@ def htmx_criteria():
     repo = request.form.get('repo')
     pages, pages_errors, sources = check_pages(repo)
     if not pages_errors:
-        html, html_errors = check_valid(sources)
-        linked, linked_errors = check_linked(sources)
-        tabular = check_tabular(sources)
-        css = check_css(sources)
+        # html, html_errors = check_valid(sources)
+        # linked, linked_errors = check_linked(sources)
+        # tabular = check_tabular(sources)
+        # css = check_css(sources)
         img = check_img(sources)
 
     criteria = [
@@ -105,7 +105,7 @@ def htmx_criteria():
 @bp.route('/web7', methods=['GET'])
 def webseiten():
     team_repos = {
-        '7a': ['Chairy', 'FootShop', 'German-Fly-Xpress', 'HappyJacket', 'Hockey-Psycho-Print', 'JMJT-games.com', 'Lach-Merch-Industries', 'RandomBazaar'],
+        '7a': ['Chairy', 'FootShop', 'German-Fly-Xpress', 'HappyJacket', 'Hockey-Psycho-Print', 'JMJT-games', 'Lach-Merch-Industries', 'RandomBazaar'],
         '7b': ['Backi-Socki', 'Baumschokolade', 'Big-Arrow-Balls', 'FruityBeach', 'Gigachat-333', 'Juwelier-FEP', 'Magic-Pets', 'Panzer-Kleinanzeigen', 'Plushclothes', 'Povtorialka', 'Vivi'],
         '7c': ['12-Months-Idea', 'Alberts-Markt', 'Coldwar-Lifestyle', 'Explain-Redstone', 'Flight-Height-2100', 'Help-the-World', 'Housemonkey', 'Krasse-Knaller', 'Lion-Esports', 'Mathe-Nachhilfe', 'Roblox-Accounts', 'Visa-Kitchen'],
         '7d': ['AI-BookWriter', 'Astroloom', 'Bijou-DAmour', 'Brillion', 'Carrier24', 'FlexiGaming-PC', 'Hannes-Fanshop', 'Kuschel-Minis', 'Operation-Deep-Down', 'PferdeShop', 'UiA'],
