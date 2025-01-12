@@ -34,7 +34,11 @@ def check_pages(repo):
         return 'danger', errors, None
     return 'success', None, sources
 
-def check_valid(sources):
+def check_idea(sources):
+    print(sources)
+
+
+def check_valid_html(sources):
     html_headers = {'Content-Type': 'text/html; charset=utf-8'}
     url = 'https://validator.w3.org/nu/?out=json'
     r = requests.post(url, sources['index'], headers=html_headers)
@@ -83,10 +87,15 @@ def htmx_criteria():
     repo = request.form.get('repo')
     pages, pages_errors, sources = check_pages(repo)
     if not pages_errors:
-        # html, html_errors = check_valid(sources)
-        # linked, linked_errors = check_linked(sources)
-        # tabular = check_tabular(sources)
-        # css = check_css(sources)
+        idea = check_idea(sources)
+        try:
+            html, html_errors = check_valid_html(sources)
+        except Exception as e:
+            html = 'danger'
+            html_errors = [e]
+        linked, linked_errors = check_linked(sources)
+        tabular = check_tabular(sources)
+        css = check_css(sources)
         img = check_img(sources)
 
     criteria = [
