@@ -6,8 +6,6 @@ from functools import lru_cache
 import requests
 from flask import Blueprint, render_template, request
 
-from src.models import Repository, Branch, Issue
-
 bp = Blueprint('web7', __name__)
 gitea_url = 'https://jms-inf.de/git/api/v1/'
 headers = {'Authorization': 'token ' + os.getenv('GITEA_API')}
@@ -33,10 +31,6 @@ def check_pages(repo):
     if errors:
         return 'danger', errors, None
     return 'success', None, sources
-
-def check_idea(sources):
-    print(sources)
-
 
 def check_valid_html(sources):
     html_headers = {'Content-Type': 'text/html; charset=utf-8'}
@@ -87,12 +81,7 @@ def htmx_criteria():
     repo = request.form.get('repo')
     pages, pages_errors, sources = check_pages(repo)
     if not pages_errors:
-        idea = check_idea(sources)
-        try:
-            html, html_errors = check_valid_html(sources)
-        except Exception as e:
-            html = 'danger'
-            html_errors = [e]
+        html, html_errors = check_valid_html(sources)
         linked, linked_errors = check_linked(sources)
         tabular = check_tabular(sources)
         css = check_css(sources)
