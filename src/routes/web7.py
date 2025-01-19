@@ -10,12 +10,6 @@ bp = Blueprint('web7', __name__)
 gitea_url = 'https://jms-inf.de/git/api/v1/'
 headers = {'Authorization': 'token ' + os.getenv('GITEA_API')}
 
-@lru_cache()
-def get_repo_contents(repo):
-    print(repo.name)
-    commits = repo.get_commits()
-    return commits[0]
-
 def check_pages(repo):
     errors = []
     sources = {}
@@ -100,7 +94,7 @@ def htmx_criteria():
     ]
     return render_template('web7/criteria.partial', criteria=criteria)
 
-@bp.route('/web7', methods=['GET'])
+@bp.route('/', methods=['GET'])
 def webseiten():
     team_repos = {
         '7a': ['Chairy', 'FootShop', 'German-Fly-Xpress', 'HappyJacket', 'Hockey-Psycho-Print', 'JMJT-games', 'Lach-Merch-Industries', 'RandomBazaar'],
@@ -109,4 +103,16 @@ def webseiten():
         '7d': ['AI-BookWriter', 'Astroloom', 'Bijou-DAmour', 'Brillion', 'Carrier24', 'FlexiGaming-PC', 'Hannes-Fanshop', 'Kuschel-Minis', 'Operation-Deep-Down', 'PferdeShop', 'UiA'],
     } # ids: 8, 10, 11, 9
 
-    return render_template('web7/overview.html', team_repos=team_repos)
+    return render_template('web7/index.html', team_repos=team_repos)
+
+@bp.route('/simon')
+def simon():
+    return render_template('web7/simon.html')
+
+@bp.route('/games.html')
+def simon_games():
+    return render_template('web7/simon-games.html')
+
+@bp.route('/friends.html')
+def simon_friends():
+    return render_template('web7/simon-friends.html')
