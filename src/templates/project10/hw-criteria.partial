@@ -1,0 +1,9 @@
+<p>Für das Hardware-Projekt sollen die folgenden Anforderungen gelten:</p>
+
+<ul class="list-group">
+	<li class="list-group-item">Überprüfung und gegebenenfalls Reparatur aller Bastel-PCs in R123</li>
+	<li class="list-group-item">Instandsetzung von ca. 40 Laptops zur Bereitstellung für Bedürftige durch den Verein Computertruhe e.V.</li>
+	<li class="list-group-item">Dafür Erstellung einer Checkliste (auf Basis genauer Lektüre des <a href="https://wiki.computertruhe.de/Instandsetzung_der_Hardware" target="_blank">Computertruhe-Wikis</a>) nach der jedes Gerät instandgesetzt wird.</li>
+	<li class="list-group-item">Dabei regelmäßige Updates auch in Form eines "Entwickler-Tagebuchs" (DevLog) in dem beschrieben wird, was erreicht wurde und wo noch Probleme bestehen.</li>
+	<li class="list-group-item">...</li>
+</ul>

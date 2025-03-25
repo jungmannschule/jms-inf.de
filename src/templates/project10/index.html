@@ -86,15 +86,28 @@
           </div>
         </li>
         <li class="mb-1">
-          <button hx-get="/project10/test" hx-target="#main" hx-swap="innerHTML" name="hardware" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#hardware-collapse" aria-expanded="false">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#jwinf-collapse" aria-expanded="false">
+            JwInf & BwInf
+          </button>
+          <div class="collapse" id="jwinf-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"jwinf-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"jwinf-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#hardware-collapse" aria-expanded="false">
             Hardware
           </button>
           <div class="collapse" id="hardware-collapse" style="">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"hw-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"hw-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
             </ul>
           </div>
         </li>
@@ -104,10 +117,10 @@
           </button>
           <div class="collapse" id="python-collapse" style="">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
-              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"python-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"python-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
             </ul>
           </div>
         </li>
