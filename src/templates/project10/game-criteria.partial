@@ -1,0 +1,16 @@
+<p>Für ein Spielentwicklungs-Projekt sollen die folgenden Anforderungen gelten:</p>
+
+<ul class="list-group">
+	<li class="list-group-item">Entwicklung eines eigenen kleinen Projekts mit funktionierender Spielmechanik</li>
+	<li class="list-group-item">Umsetzung mit Godot oder Scratch</li>
+	<li class="list-group-item">Dabei regelmäßige Updates auch in Form eines "Entwickler-Tagebuchs" (DevLog) in dem beschrieben wird, was erreicht wurde und wo noch Probleme bestehen.</li>
+	<li class="list-group-item">...</li>
+</ul>
+
+<p class="pt-2"><em>- oder -</em></p>
+
+<ul class="list-group">
+	<li class="list-group-item">Umfangreiche Modifizierung eines bestehenden Spiels (z.B. Anpassung von Grafiken)</li>
+	<li class="list-group-item">Dabei ebenfalls regelmäßige Updates auch in Form eines "Entwickler-Tagebuchs" (DevLog) in dem beschrieben wird, was erreicht wurde und wo noch Probleme bestehen.</li>
+	<li class="list-group-item">...</li>
+</ul>

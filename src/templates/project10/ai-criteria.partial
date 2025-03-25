@@ -1,0 +1,9 @@
+<p>Für ein KI-Projekt sind die Regeln weiter gefasst, hier müsst ihr stärker einen eigenen Fokus finden.
+
+<ul class="list-group">
+	<li class="list-group-item">Wiederholen der bekannten Inhalte aus dem Schulbuch ("Maschinelles Lernen", S.146 ff.)</li>
+	<li class="list-group-item">Ausführbare, eigene Programmierleistung, die sich entweder sinnvoll auf KI stützt (z.B. mittels Prompting) oder unabhängig von LLMs ein eigenes Experiment umsetzt</li>
+	<li class="list-group-item"><em>Alternativ</em>: Die schriftliche Auseinandersetzung mit einem KI-Thema, mit Veranschaulichung der eingesetzten Technik.</li>
+	<li class="list-group-item">Dabei regelmäßige Updates auch in Form eines "Entwickler-Tagebuchs" (DevLog) in dem beschrieben wird, was erreicht wurde und wo noch Probleme bestehen.</li>
+	<li class="list-group-item">...</li>
+</ul>

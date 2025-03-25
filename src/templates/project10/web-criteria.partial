@@ -1,0 +1,9 @@
+<p>Für ein HTML-Projekt sollen die folgenden Anforderungen gelten:</p>
+
+<ul class="list-group">
+	<li class="list-group-item">Weiterentwicklung eines HTML-Projekts aus Jg. 9 (z.B. "Bibliothek der Dinge", "Dogfinder", "Fördefinanz") oder neue Idee</li>
+	<li class="list-group-item">Die Webseite soll unter eigener Domain im Netz erreichbar sein.</li>
+	<li class="list-group-item">Die Webseite soll dynamische Inhalte und die erforderliche Funktionalität bieten.</li>
+	<li class="list-group-item">Dabei regelmäßige Updates auch in Form eines "Entwickler-Tagebuchs" (DevLog) in dem beschrieben wird, was erreicht wurde und wo noch Probleme bestehen.</li>
+	<li class="list-group-item">...</li>
+</ul>

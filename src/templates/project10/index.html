@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block style %}
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .75rem;
+}
+{% endblock %}
+
+{% block content %}
+  <div class="text-center">
+    <a href="https://jms.tipp10.com"><img class="mb-3" src="{{ url_for('static', filename='img/keyboard.png') }}"></a>
+    <h1 class="display-5 fw-bold text-body-emphasis">Abschlussprojekt & Tastschreiben</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Wir üben das Zehnfingersystem und beenden das Jahr mit einem Projekt.</p>
+    </div>
+  </div>
+  <div class="container d-flex" data-bs-theme="light">
+    <div class="flex-shrink-0 p-3" style="width: 280px;">
+      <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#basics-collapse" aria-expanded="false">
+            Grundlagen
+          </button>
+          <div class="collapse" id="basics-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"aim": ""}' class="link-body-emphasis d-inline-flex text-decoration-none rounded">Ziel</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"english": ""}' class="link-body-emphasis d-inline-flex text-decoration-none rounded">Englisch</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"git": ""}' class="link-body-emphasis d-inline-flex text-decoration-none rounded">Git</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"science": ""}' class="link-body-emphasis d-inline-flex text-decoration-none rounded">Wiss. Arbeiten</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="border-top my-3"></li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#web-collapse" aria-expanded="false">
+            Webseite
+          </button>
+          <div class="collapse" id="web-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"web-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"web-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            Spielentwicklung
+          </button>
+          <div class="collapse" id="dashboard-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"game-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"game-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+            KI
+          </button>
+          <div class="collapse" id="orders-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"ai-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"ai-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#media-collapse" aria-expanded="false">
+            Medien & Kultur
+          </button>
+          <div class="collapse" id="media-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"media-criteria": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Kriterien</a></li>
+              <li><a href="#" hx-get="/project10/partials" hx-target="#main" hx-swap="innerHTML" hx-vals='{"media-links": ""}'
+                     class="link-body-emphasis d-inline-flex text-decoration-none rounded">Links</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button hx-get="/project10/test" hx-target="#main" hx-swap="innerHTML" name="hardware" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#hardware-collapse" aria-expanded="false">
+            Hardware
+          </button>
+          <div class="collapse" id="hardware-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button hx-get="/project10/test" hx-target="#main" hx-swap="innerHTML" name="python" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#python-collapse" aria-expanded="false">
+            Python Deep Dive
+          </button>
+          <div class="collapse" id="python-collapse" style="">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+              <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container mt-4" id="main">
+    </div>
+
+
+  </div>
+
+
+
+
+{% endblock %}
