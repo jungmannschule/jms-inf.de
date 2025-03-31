@@ -1,0 +1,108 @@
+#name, #animate, #catch, #music, #story,
+#pong, #dance, #jump, #pet, #fall {
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+}
+.btn {
+    position: relative;
+}
+ #name .btn,
+ #name .btn.outline:hover {
+     background: #0079c1;
+     border-color: #0079c1;
+     color: #fff;
+ }
+#name .btn.outline {
+    background: none;
+    color: #0079c1;
+}
+#animate .btn,
+#animate .btn.outline:hover {
+    background: #ffc40c;
+    border-color: #ffc40c;
+    color: #fff;
+}
+#animate .btn.outline {
+    background: none;
+    color: #0079c1;
+}
+#catch .btn,
+#catch .btn.outline:hover {
+    background: #b6519e;
+    border-color: #b6519e;
+    color: #fff;
+}
+#catch .btn.outline {
+    background: none;
+    color: #b6519e;
+}
+#music .btn,
+#music .btn.outline:hover {
+    background: #f04e29;
+    border-color: #f04e29;
+    color: #fff;
+}
+#music .btn.outline {
+    background: none;
+    color: #f04e29;
+}
+#story .btn,
+#story .btn.outline:hover {
+    background: #6950a1;
+    border-color: #6950a1;
+    color: #fff;
+}
+#story .btn.outline {
+    background: none;
+    color: #6950a1;
+}
+#pong .btn,
+#pong .btn.outline:hover {
+    background: #008160;
+    border-color: #008160;
+    color: #fff;
+}
+#pong .btn.outline {
+    background: none;
+    color: #008160;
+}
+#dance .btn,
+#dance .btn.outline:hover {
+    background: #f04e6e;
+    border-color: #f04e6e;
+    color: #fff;
+}
+#dance .btn.outline {
+    background: none;
+    color: #f04e6e;
+}
+#jump .btn,
+#jump .btn.outline:hover {
+    background: #f47920;
+    border-color: #f47920;
+    color: #fff;
+}
+#jump .btn.outline {
+    background: none;
+    color: #f47920;
+}
+#pet .btn,
+#pet .btn.outline:hover {
+    background: #009a49;
+    border-color: #009a49;
+    color: #fff;
+}
+#pet .btn.outline {
+    background: none;
+    color: #009a49;
+}
+#fall .btn,
+#fall .btn.outline:hover {
+    background: #0094bb;
+    border-color: #0094bb;
+    color: #fff;
+}
+#fall .btn.outline {
+    background: none;
+    color: #0094bb;
+}
