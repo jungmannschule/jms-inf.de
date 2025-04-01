@@ -1,10 +1,11 @@
 #name, #animate, #catch, #music, #story,
 #pong, #dance, #jump, #pet, #fall {
-    padding: 1em 0;
+    padding: 1em 0 0.2em 0;
     border-bottom: 1px solid #ddd;
 }
 .btn {
     position: relative;
+    margin-bottom: 0.8em;
 }
  #name .btn,
  #name .btn.outline:hover {
