@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Klasse 6a</title>
-</head>
-<body>
-nix
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin: 0 auto; width: 25em; padding: 10em 0; text-align: center;">
+  <p>Lade die unten stehende Datei herunter, indem du rechts klickst und "Datei speichern unter" wählst.</p>
+  <p>Speichere die Datei auf dem <em>Schreibtisch</em>.</p>
+  <a class="" href="{{ url_for('static', filename='files/formatierung_uebung.odt') }}">formatierung_uebung.odt</a>
+</div>
+{% endblock %}
