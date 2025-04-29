@@ -27,13 +27,13 @@
     background: none;
     color: #0079c1;
 }
-#catch .btn,
-#catch .btn.outline:hover {
+#chase .btn,
+#chase .btn.outline:hover {
     background: #b6519e;
     border-color: #b6519e;
     color: #fff;
 }
-#catch .btn.outline {
+#chase .btn.outline {
     background: none;
     color: #b6519e;
 }
@@ -97,13 +97,13 @@
     background: none;
     color: #009a49;
 }
-#fall .btn,
-#fall .btn.outline:hover {
+#catch .btn,
+#catch .btn.outline:hover {
     background: #0094bb;
     border-color: #0094bb;
     color: #fff;
 }
-#fall .btn.outline {
+#catch .btn.outline {
     background: none;
     color: #0094bb;
 }
