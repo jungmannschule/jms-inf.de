@@ -79,3 +79,7 @@ def projekt_index():
             file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
             flash('Datei erfolgreich hochgeladen!')
     return render_template('projekt/index.html')
+
+@bp.route('/mac')
+def mac_on_google_sheets():
+    return redirect('https://docs.google.com/spreadsheets/d/1u1RwwwOthMlUt4nvrCw1qHDb7vpYRwPb5PpvfO6zJ7U/edit?gid=0#gid=0')
