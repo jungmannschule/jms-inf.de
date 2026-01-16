@@ -86,5 +86,5 @@ def mac_on_google_sheets():
 
 @bp.route('/hack')
 def hacking_lab():
-    return redirect('https://node-xejd.onrender.com/)
+    return redirect('https://node-xejd.onrender.com/')
 
