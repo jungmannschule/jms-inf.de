@@ -92,3 +92,7 @@ def hacking_lab():
 def not_a_robot():
     return redirect('https://neal.fun/not-a-robot/')
 
+@bp.route('/go')
+def go_lab():
+    return redirect('https://golab.gg/')
+
