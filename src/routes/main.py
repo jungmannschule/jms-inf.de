@@ -88,7 +88,7 @@ def mac_on_google_sheets():
 def hacking_lab():
     return redirect('https://node-xejd.onrender.com/')
 
-@bp.route('robot')
+@bp.route('/robot')
 def not_a_robot():
     return redirect('https://neal.fun/not-a-robot/')
 
