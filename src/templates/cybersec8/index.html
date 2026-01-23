@@ -17,64 +17,41 @@
    spielerisches Experimentieren und Ausnutzen bekannter Werkzeuge und Sicherheitslücken mit dem Ziel, möglichst schnell
      eine sogenannte "Flag", einen geheimen Code, zu finden. </p>
 
-   <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+   <div class="row g-4 py-5">
 
      <div class="col d-flex align-items-start">
+       <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+         <svg class="bi" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.75"> <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path> </svg>
+       </div>
+       <div>
+         <h3 class="fs-2 text-body-emphasis">Phishing</h3>
+         <p>Formuliere eine Phishing Mail, die einen Schüler/eine Schülerin dazu bringen soll, auf eine fingierte Schulseite zu klicken.</p>
+         <div style="background: #ddd; margin-bottom: 2em; padding: 0 1em 1em 1em;">
+           <p><code>Absender: ...@jungmannschule.de<br />
+             Betreff: ...</code></p>
+           ...
+         </div>
+         <a href="https://jms-inf.de/git/10inf/dodge-the-creeps-2d" class="btn btn-secondary">
+           Phishing
+         </a>
+         <a href="https://jms-inf.de/git/10inf/dodge-the-creeps-2d" class="btn btn-secondary">
+           Kein Phishing
+         </a>
+       </div>
+     </div>
+
+     <div class="col col-lg-4 d-flex align-items-start">
         <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
          <svg class="bi" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"> <path d="M10 18h4"></path> <path d="M3 8a9 9 0 0 1 9 9v1l1.428 -4.285a12 12 0 0 1 6.018 -6.938l.554 -.277"></path> <path d="M15 6h5v5"></path> </svg>
         </div>
         <div>
-          <h3 class="fs-2 text-body-emphasis">Tappy Bird</h3>
-          <p>Ein erstes, kleines Spiel in 2D: Schubs den Vogel über die Röhren.</p>
-          <div class="list-group list-group-flush mb-3">
-            <a class="list-group-item list-group-item-action" href="{{ url_for('static', filename='files/GodotForKidsWorkshop.pdf') }}">Anleitung PDF</a>
-            <a class="list-group-item list-group-item-action" href="https://gitlab.com/olli_lo/tappybirdpacket#">Download: Art, Fonts, Sounds</a>
-          </div>
-          <a href="https://jms-inf.de/git/10inf/tappybird" class="btn btn-primary">
-            Go to repo!
+          <h3 class="fs-2 text-body-emphasis">CyberDefense Lab</h3>
+          <p>CTF Spielumgebung mit 13 Flaggen, für fortgeschrittene Schüler</p>
+          <a href="https://jms-inf.de/hack" class="btn btn-primary">
+            Go to Lab
           </a>
         </div>
      </div>
-
-     <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.75"> <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path> </svg>
-        </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">Dodge the Creeps</h3>
-          <p>Ein weiteres Spiel mit einer Variante in 3D: Lass dich nicht erwischen!</p>
-          <div class="list-group list-group-flush mb-3">
-            <a class="list-group-item list-group-item-action" href="https://docs.godotengine.org/de/4.x/getting_started/first_2d_game/index.html">
-              Anleitung: Dodge the Creeps 2D</a>
-            <a class="list-group-item list-group-item-action" href="https://docs.godotengine.org/de/4.x/getting_started/first_3d_game/index.html">
-              Anleitung: Squash the Creeps 3D</a>
-          </div>
-          <a href="https://jms-inf.de/git/10inf/dodge-the-creeps-2d" class="btn btn-primary">
-            Go to repo! (2D)
-          </a>
-          <a href="https://jms-inf.de/git/10inf/dodge-the-creeps-3d" class="btn btn-primary">
-            Go to repo! (3D)
-          </a>
-        </div>
-      </div>
-
-     <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1.25em" height="1.25em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5"> <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path> <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path> <path d="M5 8h4"></path> <path d="M9 16h4"></path> <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z"></path> <path d="M14 9l4 -1"></path> <path d="M16 16l3.923 -.98"></path> </svg>
-        </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">Material</h3>
-          <p>Wie funktioniert das genau? Gutes Lernmaterial und andere Links:</p>
-          <div class="list-group list-group-flush mb-3">
-            <a class="list-group-item list-group-item-action" href="https://docs.godotengine.org/de/4.x/getting_started/introduction/key_concepts_overview.html">
-              Godot Docs: Nodes, Szenen, Signale</a>
-            <a class="list-group-item list-group-item-action" href="https://www.gdquest.com/tutorial/getting-started/learn-to/game-engine-basics/">
-              GDQuest: Game Engine Basics (en)</a>
-            <a class="list-group-item list-group-item-action" href="https://gdquest.github.io/learn-gdscript/">
-              GDQuest: Learn GDScript</a>
-          </div>
-        </div>
-      </div>
 
     </div>
  </div>
