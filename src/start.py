@@ -45,3 +45,5 @@ def register_blueprints(app):
     app.register_blueprint(bp_scratch7, url_prefix='/scratch7')
     from src.routes.project10 import bp as bp_project10
     app.register_blueprint(bp_project10, url_prefix='/project10')
+    from src.routes.cybersec8 import bp as bp_cybersec8
+    app.register_blueprint(bp_cybersec8, url_prefix='/cybersec8')
