@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="text-center">
+    <a href="https://jms.tipp10.com"><img class="mb-3" src="{{ url_for('static', filename='img/keyboard.png') }}"></a>
+  </div>
+  <div class="my-5 container" style="text-align: center;">
+    <h1>Scratch Cards <span class="badge text-bg-primary">Inf 7</span></h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="mb-4">Kriterien für das Scratch-Projekt</h3>
+        <h5>Funktionen / „Features“</h5>
+        <ul>
+          <li>Alle Programmier-Karten wurden implementiert <b>*</b></li>
+          <li>Keine Bugs und unerwünschtes Verhalten</li>
+          <li>Spiel hat ein Ziel (Punkte, Timer, etc.) <b>*</b></li>
+          <li>Spiel ist interaktiv (man kann den Ablauf beeinflussen)</li>
+          <li>Reset: Man kann direkt mit dem Spiel beginnen</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5>Aussehen / „Style“</h5>
+        <ul>
+          <li>stimmiger, einheitlicher Look (kann aber auch bewusst chaotisch sein)</li>
+          <li>eigene Grafiken</li>
+        </ul>
+        <h5>Optional: Zusätzliche Funktionen /„Bonus Features“</h5>
+        <ul>
+          <li>Multiplayer: Mehrere Spieler können gleichzeitig etwas tun </li>
+          <li>Level: Es gibt mehrere Level mit veränderten Eigenschaften</li>
+          <li>„Welcome“/Title Screen</li>
+          <li>„Game Over“ Screen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="name">
+        <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/name-cards.pdf">Animiere einen Namen</a>
+        </div>
+        <div id="animate">
+        <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/animation-cards.pdf">Animiere eine Figur</a>
+        </div>
+        <div id="chase">
+        <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/chase-cards.pdf">
+          Mach ein Fangspiel</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149370902">John_Ewen
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148290961">Ballermaenner
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1155030683/">Julien_147963
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148291057/">LFCombo
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148870929/">1_SKIBIDI_RIZZLER_1 (Hai)
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148871599/">1_SKIBIDI_RIZZLER_1 (Einhorn)
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+        </div>
+        <div id="music">
+        <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/music-cards.pdf">
+          Mach Musik</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148291204">jette13
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065130">Pauline1200
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149369409">jaenvali
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+        </div>
+        <div id="story">
+        <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/story-cards.pdf">
+          Erzähle eine Geschichte</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147045804">YajaHanah
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148290852">MikimausDerCoole
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148290905">LiMa-25
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+        </div>
+        <div id="catch">
+          <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/catch-cards.pdf">Fallen & Sammeln Spiel</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149368550">anzhongli
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1152777956">Fivi1213
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148870175">Baffeo12
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1152259111">BienenSchildkroeten
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148293075">GurkiundPotatoe
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148293252/">Tomato20000
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065409">potho2025
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+        </div>
+      </div>
+        <div class="col">
+        <div id="pong">
+          <a class="btn" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/pong-cards.pdf">
+            Ping-Pong-Spiel</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1135698446">Die_Scratcher_S_D
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149369835/">KDS_THUNDERGOD
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149369267">Battlebus_tutu
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149370134/">N_D_D_315
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149369189">Todesstern13
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065183">dummkopf1213
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1158282467">hannesvsluki
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149372215">Splash_bomb
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1159384824">CrionHisPrime
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148258413">ohiosigmamode_fn
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1152260975/">mija_flower
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148871359/">2011JE13
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1152258700">JohannZirkel1
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1156117663">LILNOGGER
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+        </div>
+        <div id="dance">
+          <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/dance-cards.pdf">Let's dance</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1155034540">soso078
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1153098756">jang-jeongjin-skz
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+        </div>
+        <div id="jump">
+          <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/jumping-cards.pdf">Springspiel</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149372244/">Fivi1213
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147067195/">fruitybeach-ms
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147067249">fruitybeach-mm
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1155034887">ichwilleineisteee
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1155044101">leniulina
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1141496744">SK-MR
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7d</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149372452">primesilxnx
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149369178">kingjulienbam
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1161273030">d-peters
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7a</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065998">OLAFHOLZ2
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065540">Chicken-Curry187
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147066848">JoJo_2305
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065066">360Noscope_lol
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1148871082">Leppitm_Kcenhcsa
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+        </div>
+        <div id="pet">
+          <a class="btn btn-primary" target="_blank" href="https://resources.scratch.mit.edu/www/cards/de/pet-cards.pdf">Virtuelles Haustier</a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147066015">Its_only_finjanelly
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1149368917">Peter_Tuerlich
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7c</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065762">Nivesdragon
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+          <a class="btn outline" href="https://scratch.mit.edu/projects/1147065837">Roma_Universita12
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary-subtle">7b</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

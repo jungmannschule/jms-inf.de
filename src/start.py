@@ -47,3 +47,5 @@ def register_blueprints(app):
     app.register_blueprint(bp_project10, url_prefix='/project10')
     from src.routes.cybersec8 import bp as bp_cybersec8
     app.register_blueprint(bp_cybersec8, url_prefix='/cybersec8')
+    from src.routes.archive import bp as bp_archive
+    app.register_blueprint(bp_archive, url_prefix='/archiv')
