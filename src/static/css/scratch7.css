@@ -107,3 +107,13 @@
     background: none;
     color: #0094bb;
 }
+#other .btn,
+#other .btn.outline:hover {
+    background: #ccc;
+    border-color: #ccc;
+    color: #333;
+}
+#other .btn.outline {
+    background: none;
+    color: #333;
+}
