@@ -30,4 +30,5 @@ def student_page(acc):
         case 'bienenschildkroeten': scratchid = 1152259111
         case 'ichwilleineisteee':   scratchid = 1155034887
         case 'itsonlyfinjanelly':   scratchid = 1147066015
+        case 'todesstern13':        scratchid = 1149369189
     return render_template(f'scratch7/single_template.html', acc=acc, scratchid=scratchid, file=file)

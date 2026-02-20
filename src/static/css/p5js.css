@@ -4,5 +4,9 @@
 }
 
 #scratch, #p5js {
-    margin: 0 2em;
+    margin: 0em 2em;
+}
+
+.col {
+    margin: 1em 0;
 }

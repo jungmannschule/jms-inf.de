@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block stylesheets %}
+  <link href="{{ url_for('static', filename='css/p5js.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
   <header>
     <div class="p-3 pb-md-4 mx-auto text-center">
@@ -110,15 +114,14 @@
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card" style="max-width: 25%;">
+    <div class="col" style="max-width:25%;">
+      <div class="card">
         <a href="">
-          <img src="{{ url_for('static', filename='img/scratch-unicorn.png') }}" class="card-img-top">
         </a>
         <div class="card-body">
-          <h5 class="card-title">Scratch Cards</h5>
-          <p class="card-text">Spiele der 7. Klassen im Jahr 2024/25.</p>
-          <a href="{{ url_for('scratch7.index_2025') }}" class="btn btn-primary">Übersicht aller Spiele</a>
+          <h5 class="card-title">Todesstern13</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/todesstern13" class="btn btn-primary">Spielen!</a>
         </div>
       </div>
     </div>
