@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <header>
+    <div class="p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-5 fw-bold text-body-emphasis">Scratch vs p5js</h1>
+      <p class="fs-5 text-body-secondary">
+        <a href="{{ url_for('archive.index') }}">Archiv</a> / Transformation der Scratch-Spiele zu P5JS-Projekten.
+      </p>
+    </div>
+  </header>
+  <main class="container">
+  <div class="row">
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">kingjulienbam</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/kingjulienbam" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">LFcombo</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/lfcombo" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Roma_Universita12</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/roma_universita12" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">GurkiundPotatoe</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/gurkiundpotatoe" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Peter_Tuerlich</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/peter_tuerlich" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">it's_only_finjanelly</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/itsonlyfinjanelly" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">primesilxncx</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/primesilxncx" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">BienenSchildkroeten</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/bienenschildkroeten" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="max-width:25%;">
+      <div class="card">
+        <a href="">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">ichwilleineisteee</h5>
+          <p class="card-text">...</p>
+          <a href="p5js/ichwilleineisteee" class="btn btn-primary">Spielen!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="max-width: 25%;">
+        <a href="">
+          <img src="{{ url_for('static', filename='img/scratch-unicorn.png') }}" class="card-img-top">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Scratch Cards</h5>
+          <p class="card-text">Spiele der 7. Klassen im Jahr 2024/25.</p>
+          <a href="{{ url_for('scratch7.index_2025') }}" class="btn btn-primary">Übersicht aller Spiele</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+{% endblock %}

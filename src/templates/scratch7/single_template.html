@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+  <link href="{{ url_for('static', filename='css/p5js.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <header>
+    <div class="p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-5 fw-bold text-body-emphasis">{{ acc }}</h1>
+      <p class="fs-5 text-body-secondary">
+        Zurück zur <a href="{{ url_for('scratch7.index_p5js') }}">Übersicht aller Spiele</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="gamescontainer">
+      <div id="scratch">
+        <iframe src="https://scratch.mit.edu/projects/{{ scratchid }}/embed" allowtransparency="true" width="450" height="400" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      </div>
+      <div id="p5js">
+        <script src="{{ url_for('static', filename=file) }}"></script>
+      </div>
+    </div>
+{% endblock %}

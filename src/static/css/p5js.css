@@ -1,0 +1,8 @@
+#gamescontainer {
+    display: flex;
+    justify-content: center;
+}
+
+#scratch, #p5js {
+    margin: 0 2em;
+}
