@@ -29,7 +29,7 @@ def index():
     return render_template('index.html')
 
 @bp.route('/odp')
-def index():
+def upload_odp():
     return send_file(url_for('static', 'social-media-unter-14.odp'))
 
 
