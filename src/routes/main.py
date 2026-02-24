@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 from time import strftime
 
-from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response, current_app
+from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response, current_app, send_file
 from werkzeug.security import check_password_hash
 from werkzeug.utils import secure_filename
 
@@ -27,6 +27,10 @@ def login():
 @bp.route('/')
 def index():
     return render_template('index.html')
+
+@bp.route('/odp')
+def index():
+    return send_file(url_for('static', 'social-media-unter-14.odp'))
 
 
 @bp.route('/steckbriefe')
