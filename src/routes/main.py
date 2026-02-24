@@ -1,8 +1,8 @@
 import os
 from datetime import datetime
-from time import strftime
 
-from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response, current_app, send_file
+from flask import Blueprint, render_template, redirect, url_for, flash, request, make_response, current_app, \
+    send_from_directory
 from werkzeug.security import check_password_hash
 from werkzeug.utils import secure_filename
 
@@ -30,7 +30,7 @@ def index():
 
 @bp.route('/odp')
 def upload_odp():
-    return send_file(url_for('static', 'social-media-unter-14.odp'))
+    return send_from_directory('static', 'social-media-unter-14.odp')
 
 
 @bp.route('/steckbriefe')
